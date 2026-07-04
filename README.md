@@ -1,144 +1,38 @@
-<div align="center">
-<img src="assets/aaaj_logo_v7.png" alt="aaaj Logo" width="850" />
-</div>
+<h1 align="center">Hi 👋, I'm Shugaa — مرحبًا 👋، أنا Shugaa</h1>
+<h3 align="center">🔐 Cybersecurity & App Developer — 🔐 أمن سيبراني ومطور تطبيقات</h3>
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00F7FF&center=true&vCenter=true&width=435&lines=%D8%A3%D9%85%D9%86+%D8%B3%D9%8A%D8%A8%D8%B1%D8%A7%D9%86%D9%8A;%D9%85%D8%B7%D9%88%D8%B1+%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA;%D8%AF%D8%A7%D8%A6%D9%85%D8%A7%D9%8B+%D8%A3%D8%AA%D8%B9%D9%84%D9%85" />
+</p>
 
-[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red?style=flat-square&logo=arxiv)](https://arxiv.org/pdf/2410.10934)
-[![Dataset](https://img.shields.io/badge/Dataset-HuggingFace-yellow?style=flat-square&logo=huggingface)](https://huggingface.co/DEVAI-benchmark)
+---
 
+## About / نبذة
 
-> [!NOTE]
-> 📢 **Agent-as-a-Judge** is not only limited to the content of this repo, but a philosophy for judging agentic work and generating high-quality agentic datasets across domains.
->
-> 🔥 **Accepted at ICML 2025!**
->
-> 🔥 We build a Open-sourced DeepWiki (**OpenWiki**) which just add two codes in this repo (**following is a demo**).
->
+I build secure, reliable applications and enjoy solving hard problems. I work across mobile and backend systems, with a focus on security and user privacy.
 
-> <div align="center" style="position: relative; width: 100%; overflow: hidden;">
->     <div style="display: flex; transition: transform 0.5s ease;">
->         <img src="assets/openwiki_1a.jpeg" alt="OpenWiki Architecture" style="min-width: 100%; object-fit: contain;" />
->         <img src="assets/openwiki_1b.jpeg" alt="OpenWiki Component" style="min-width: 100%; object-fit: contain;" />
->     </div>
-> </div>
+أبني تطبيقات آمنة وموثوقة وأستمتع بحل المشاكل المعقدة. أعمل في تطوير تطبيقات الجوال والخوادم مع تركيز على الأمن وخصوصية المستخدم.
 
+---
 
-## 🤠 Features
+### 🛠️ Tech Stack / الأدوات والتقنيات
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
 
-Agent-as-a-Judge offers two key advantages:
+---
 
-- **Automated Evaluation**: Agent-as-a-Judge can evaluate tasks during or after execution, saving 97.72% of time and 97.64% of costs compared to human experts.
-- **Provide Reward Signals**: It provides continuous, step-by-step feedback that can be used as reward signals for further agentic training and improvement.
+### 📊 GitHub Stats / إحصاءات GitHub
+![Shugaa's GitHub stats](https://github-readme-stats.vercel.app/api?username=shugaa100200-sudo&show_icons=true&theme=tokyonight)
 
-<div align="center">
-    <img src="assets/judge_first.png" alt="AaaJ" style="width: 95%; max-width: 650px;">
-</div>
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=shugaa100200-sudo&layout=compact&theme=tokyonight)
 
+---
 
+### 🔥 Streak / سلسلة النشاط
+![GitHub Streak](https://streak-stats.demolab.com?user=shugaa100200-sudo&theme=tokyonight)
 
-## 🎮 Quick Start 
+---
 
-### 1. install
-
-```python
-git clone https://github.com/metauto-ai/agent-as-a-judge.git
-cd agent-as-a-judge/
-conda create -n aaaj python=3.11
-conda activate aaaj
-pip install poetry
-poetry install
-```
-
-
-### 2. set LLM&API
-
-Before running, rename `.env.sample` to `.env` and fill in the **required APIs and Settings** in the main repo folder to support LLM calling. The `LiteLLM` tool supports various LLMs.
-
-```bash
-cp .env.sample .env
-# and then set the .env, please change accordingly, for example: 
-# OPENAI_API_KEY="sk-***"
-# ...
-```
-
-### 3. run 
-
-
-<div align="center">
-    <img src="assets/demo.gif" alt="Demo GIF" style="width: 100%; max-width: 650px;">
-</div>
-
-> [!TIP]
-> See more comprehensive [usage scripts](scripts/README.md).
->
-
-
-#### Usage A: **Ask Anything** for Any Workspace:
-
-```python 
-
-PYTHONPATH=. python scripts/run_ask.py \
-  --workspace $(pwd)/benchmark/workspaces/OpenHands/39_Drug_Response_Prediction_SVM_GDSC_ML \
-  --question "What does this workspace contain?"
-```
-
-You can find an [example](assets/ask_sample.md) to see how **Ask Anything** works.
-
-
-#### Usage B: **Agent-as-a-Judge** for **DevAI**
-
-
-```python
-
-PYTHONPATH=. python scripts/run_aaaj.py \
-  --developer_agent "OpenHands" \
-  --setting "black_box" \
-  --planning "efficient (no planning)" \
-  --benchmark_dir $(pwd)/benchmark
-```
-
-💡 There is an [example](assets/aaaj_sample.md) that shows the process of how **Agent-as-a-Judge** collects evidence for judging.
-
-####  Usage C: **OpenWiki** 🔥🔥🔥
-
-
-
-```python
-python scripts/run_wiki.py https://github.com/metauto-ai/GPTSwarm
-```
-
-
-## 🤗 DevAI Dataset 
-
-
-
-<div align="center">
-    <img src="assets/dataset.png" alt="Dataset" style="width: 100%; max-width: 600px;">
-</div>
-
-> [!IMPORTANT]
-> As a **proof-of-concept**, we applied **Agent-as-a-Judge** to code generation tasks using **DevAI**, a benchmark consisting of 55 realistic AI development tasks with 365 hierarchical user requirements. The results demonstrate that **Agent-as-a-Judge** significantly outperforms traditional evaluation methods, delivering reliable reward signals for scalable self-improvement in agentic systems.
-> 
-> Check out the dataset on [Hugging Face 🤗](https://huggingface.co/DEVAI-benchmark).
-> See how to use this dataset in the [guidelines](benchmark/devai/README.md).
-
-
-<!-- <div align="center">
-    <img src="assets/sample.jpeg" alt="Sample" style="width: 100%; max-width: 600px;">
-</div> -->
-
-## Reference
-
-Feel free to cite if you find the Agent-as-a-Judge concept useful for your work:
-
-```
-@article{zhuge2024agent,
-  title={Agent-as-a-Judge: Evaluate Agents with Agents},
-  author={Zhuge, Mingchen and Zhao, Changsheng and Ashley, Dylan and Wang, Wenyi and Khizbullin, Dmitrii and Xiong, Yunyang and Liu, Zechun and Chang, Ernie and Krishnamoorthi, Raghuraman and Tian, Yuandong and Shi, Yangyang and Chandra, Vikas and Schmidhuber, J{\"u}rgen},
-  journal={arXiv preprint arXiv:2410.10934},
-  year={2024}
-}
-```
-
-
+This repo: **agent-as-a-judge** / هذا المستودع: **agent-as-a-judge**
